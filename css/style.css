@@ -483,6 +483,7 @@ h2{
 h3{
     font-style: italic;
     font-weight: 100;
+    color: white;
 }
 .hidden-menu{
 z-index: 2;
@@ -704,13 +705,34 @@ max-height: none !important;
 .post__img{
     height: 485px;
     overflow-x: hidden;
-     max-width: 340px;
+     /*max-width: 340px;*/
     background-color: #eaeaea;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: .5s;
+    filter: brightness(60%);
 }
+.post__img:hover{
+    filter: none;
+}
+.post__img-about-girl{
+    background: #fff url("../img/post-img/1.jpg") 0 0 no-repeat;
+    background-size: cover;
+}
+.post__img-hand{
+    background: #fff url("../img/post-img/2.jpg") 0 0 no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
 
 .post__img:hover{
     background-color: #25f1b0;

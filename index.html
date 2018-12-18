@@ -23,14 +23,6 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script  type="text/javascript">
-
-      $("#load").click(function(e) {
-        e.preventDefault();
-        $("#posts").removeClass('active');
-        $(this).addClass('active');
-      })
-    </script>
 </head>
 
 <body>
@@ -106,7 +98,7 @@
     </section>
 <section id="posts" class="posts active">
     <article class="posts__post">
-       <div class="post__img">
+       <div class="post__img post__img-about-girl">
            <h3>123</h3>
        </div>
 
@@ -123,7 +115,8 @@
         </div>
     </article>
     <article class="posts__post">
-        <div class="post__img">
+        <div class="post__img-hand post__img">
+
             <h3>123</h3>
         </div>
 
@@ -139,22 +132,6 @@
             </div>
         </div>
     </article> <article class="posts__post">
-    <div class="post__img">
-        <h3>123</h3>
-    </div>
-
-    <div class="posts__metadata">
-        <ul class="posts__metadata__items">
-            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
-            <li><a href="#">1 comment</a></li>
-        </ul>
-        <div>
-            <a href="#"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </div>
-</article> <article class="posts__post">
     <div class="post__img">
         <h3>123</h3>
     </div>
@@ -360,6 +337,13 @@
       });
     });
 
+</script>
+<script  type="text/javascript">
+
+  $("#load").click(function(e) {
+    e.preventDefault();
+    $("#posts").toggleClass('active');
+  })
 </script>
 </body>
 
