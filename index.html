@@ -1,0 +1,366 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Демо: Выдвигающееся боковое меню на чистом CSS3</title>
+    <meta name="author" content="Dobrovoimaster" />
+    <meta name="description" content="Боковая панель с элементами меню, выдвигающаяся по клику, на чистом css, без использлвания javascript" />
+    <meta name="keywords" content="боковое меню, выдвижное меню, выдвигающееся по клику, боковая панеь, css3, html, css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/left-nav-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script  type="text/javascript">
+
+      $("#load").click(function(e) {
+        e.preventDefault();
+        $("#posts").removeClass('active');
+        $(this).addClass('active');
+      })
+    </script>
+</head>
+
+<body>
+
+<header>
+    <nav class="main-menu">
+        <div>
+            <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+            <!-- Далее вёрстка самой иконки. Разделена на спаны, что бы красиво превращать в крестик при открытии (почти как в Телеграме :) -->
+            <label class="btn-menu" for="hmt">
+                <span class="first"></span>
+                <span class="second"></span>
+                <span class="third"></span>
+            </label>
+            <!-- Менюшка раскрывающаяся и скрывающаяся -->
+            <ul class="hidden-menu">
+                <h2>Hello,</h2>
+                <p>Vestibulum commodo volutpat a,
+                    convallis ac, laoreet enim.
+                    Phasellus fermentum in, dolor.
+                </p>
+                <p>Pellentesque facilisis.
+                    Nulla imperdiet sit amet magna.</p>
+                <div class="home-page-icon-hidden">
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="home-page-icon__line"></div>
+                <li class="hidden-menu__item"><a href="">Home</a></li>
+                <li class="hidden-menu__item"><a href="">Posts</a></li>
+                <li class="hidden-menu__item"><a href="">Gallery</a></li>
+                <li class="hidden-menu__item"><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <div>
+            <button id="searchBtn" class="search-btn">
+                <i class="fas fa-search"></i>
+                <input type="search" value="" placeholder="Shearch">
+            </button>
+        </div>
+        <div id="search">
+            <button type="button" class="close">x</button>
+            <form>
+                <input type="search" value="" placeholder="Shearch">
+                <button type="submit" class="btn btn-search">
+                    SEARCH
+                </button>
+            </form>
+        </div>
+
+
+
+
+
+
+
+    </nav>
+</header>
+<main>
+    <section class="home-page">
+        <div class="home-page-icon">
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <h1>CONSTELLATION</h1>
+        <h3>If I create from the heart, nearly everything works; if from the head, almost nothing.</h3>
+    </section>
+<section id="posts" class="posts active">
+    <article class="posts__post">
+       <div class="post__img">
+           <h3>123</h3>
+       </div>
+
+        <div class="posts__metadata">
+            <ul class="posts__metadata__items">
+                <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+                <li><a href="#">1 comment</a></li>
+            </ul>
+            <div>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </article>
+    <article class="posts__post">
+        <div class="post__img">
+            <h3>123</h3>
+        </div>
+
+        <div class="posts__metadata">
+            <ul class="posts__metadata__items">
+                <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+                <li><a href="#">1 comment</a></li>
+            </ul>
+            <div>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article> <article class="posts__post">
+    <div class="post__img">
+        <h3>123</h3>
+    </div>
+
+    <div class="posts__metadata">
+        <ul class="posts__metadata__items">
+            <li><data value="13 July 2014">13 July 2014&#32;/</data>&#32;</li>
+            <li><a href="#">1 comment</a></li>
+        </ul>
+        <div>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</article>
+</section>
+<section id="load" class="load-line ">
+    <div class="">LOAD MORE POSTS</div>
+</section>
+
+</main>
+
+<footer>
+    <section>
+        <div class="home-page-icon">
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+    <section class="athor">
+        <p>Made with love at EL Passion 2014</p>
+        <p>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.</p>
+    </section>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $(function(){
+      $('#searchBtn').on("click", function(){
+        $('#search').addClass('open');
+        $('#search > form > input[type="search"]').focus()
+      });
+
+      $('#search, #search button.close').on('click keyup', function (event){
+       if(
+
+           event.target == this||
+         event.target.className == 'close'||
+         event.keyCode == 27
+
+       )
+       {
+         $(this).removeClass('open');
+        }
+//
+      });
+    });
+
+</script>
+</body>
+
+</html>
